@@ -7,7 +7,6 @@
  * Description: This class is responsible for:
  * building Balanced 2D Tree (B2DT)
  * Printing the B2DT
- * @param value is the node's point (x,y)
  *******************************************************/
  class BKDTree{
     var current:Node=null
