@@ -279,11 +279,12 @@ class Search{
           else{  
                 current1.checked=1
                   
-                var res=pairDistance(findRoot(current1), tree,  0, distance)   
-                queuePair=res++queuePair
+                var res=pairDistance(findRoot(current1), tree,  0, distance) 
+                if(res!=null)
+                    queuePair=res++queuePair
                 
-                    pair(current1.left ,tree.left, depth+1, distance)
-                    pair(current1.right  ,tree.right,depth+1, distance)
+                 pair(current1.left ,tree.left, depth+1, distance)
+                 pair(current1.right  ,tree.right,depth+1, distance)
                  
                }
         return queuePair 
