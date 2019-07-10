@@ -5,6 +5,10 @@
  * @email abualia4@najah.edu 
  * @date july 2019 
  * Description: Defines the boundary box of 2D coordinate space for each point
+ * @param xMin minimum value of boundary box based on x axis 
+ * @param yMin minimum value of boundary box based on y axis 
+ * @param xMax maximum value of boundary box based on x axis
+ * @param yMax maximum value of boundary box based on y axis
  ***********************************************************************************/
 import scala.math._
 /**
