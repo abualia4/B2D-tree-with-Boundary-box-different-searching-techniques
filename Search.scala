@@ -236,7 +236,7 @@ class Search{
           else  {     if( current.checked==0){ 
                          var ed:Double=euclideanDistance(givenP.point,current.point,2)
                         
-                         if(ed<=minimumD ) {
+                         if(ed<=minimumD && ed!=0 ) {
                               var tuple=(givenP.point,current.point,ed)
                               queueR = tuple :: queueR
                               sortedQueueR=queueR.sortBy(x=>(x._3))
@@ -256,7 +256,7 @@ class Search{
                         
            } 
             
-         return queueR     
+         return sortedQueueR     
      } 
      
      
@@ -279,12 +279,12 @@ class Search{
           else{  
                 current1.checked=1
                   
-                var res=pairDistance(findRoot(current1), tree,  0, distance) 
-                if(res!=null)
-                    queuePair=res++queuePair
-                
-                 pair(current1.left ,tree.left, depth+1, distance)
-                 pair(current1.right  ,tree.right,depth+1, distance)
+               var res=pairDistance(findRoot(current1), tree,  0, distance)  
+               if(res!=null)
+               queuePair=res++queuePair
+               
+              pair(current1.left ,tree.left, depth+1, distance)
+              pair(current1.right  ,tree.right,depth+1, distance)
                  
                }
         return queuePair 
